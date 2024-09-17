@@ -48,3 +48,36 @@ const Itemsingle=document.getElementsByClassName('Iteam');
         }
     });
 }
+
+
+
+const insertbutton=document.getElementById('insert-button');
+const inputfield=document.getElementById('input-tost');
+const inputamount=document.getElementById('input-amount');
+
+const SpanId=document.getElementById('idspan');
+
+
+const RowContainar=document.getElementById('row-containar');
+
+var sum=0;
+
+
+
+insertbutton.addEventListener('click',function(){
+
+    const food=inputfield.value;
+    const amount=Number(inputamount.value);
+    sum=sum+amount;
+    const newRow=`
+    <div class="fl", data-amount="${amount}">
+    <p>${food} </p>
+    <p>${amount}</p>
+</div>
+    
+    `
+    RowContainar.innerHTML+=newRow;
+    SpanId.innerText=sum;
+
+
+});
