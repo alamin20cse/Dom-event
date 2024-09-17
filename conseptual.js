@@ -22,3 +22,29 @@ var lastvisit=null;
          }
      });
  }
+// ============================================================
+
+const Itemsingle=document.getElementsByClassName('Iteam');
+
+
+
+  var   lastvisit=null;
+  for (let i of Itemsingle) {
+    i.addEventListener('click', function() {
+      
+       
+ 
+
+        if(lastvisit==null)
+        {
+            i.style.background = 'red';
+            lastvisit=i;
+        }
+        else
+        {
+            lastvisit.style.background='transparent';
+            i.style.background='red';
+            lastvisit=i;
+        }
+    });
+}
