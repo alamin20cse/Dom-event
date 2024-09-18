@@ -70,7 +70,7 @@ insertbutton.addEventListener('click',function(){
     const amount=Number(inputamount.value);
     sum=sum+amount;
     const newRow=`
-    <div class="fl", data-amount="${amount}">
+    <div class="fl">
     <p>${food} </p>
     <p>${amount}</p>
 </div>
@@ -79,5 +79,7 @@ insertbutton.addEventListener('click',function(){
     RowContainar.innerHTML+=newRow;
     SpanId.innerText=sum;
 
+    inputfield.value="";
+    inputamount.value="";
 
 });
